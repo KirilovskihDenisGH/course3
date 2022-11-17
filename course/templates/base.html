@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Kinostock</title>
+</head>
+<body>
+  <header>
+    <div class="conteiner">
+      <nav>
+        <ul>
+          <li><a href="{% url 'main' %}"><h1 class="logo">Kinostock</h1></a></li>
+          <li><a href="{% url 'films' %}">Фильмы</a></li>
+          <li><a href="{% url 'serials' %}">Сериалы</a></li>
+          <li><a href="{% url 'cartoons' %}">Мультфильмы</a></li>
+          <li><a href="{% url 'anime' %}">Аниме</a></li>
+        </ul>
+      </nav>
+      <ul>
+        <li><a href="#">Поиск</a></li>
+        <li><a href="#">Аккаунт</a></li>
+      </ul>
+    </div>
+  </header>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

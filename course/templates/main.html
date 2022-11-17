@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <main>
+    <section class="slider">
+      <div class="wrapper">
+        <img class="slider-item" src="{% static 'img/2.png' %}" alt="">
+        <img class="slider-item active" src="{% static 'img/1.png' %}" alt="">
+        <img class="slider-item" src="{% static 'img/3.png' %}" alt="">
+      </div>
+    </section>
+
+    <section class="large-section">
+      <div class="conteiner">
+        <h2><a href="#">Новое в подписке</a></h2>
+
+        <div class="large-items">
+          <img class="large-item" src="img/n1.png" alt="">
+          <img class="large-item" src="img/n2.png" alt="">
+          <img class="large-item" src="img/n3.png" alt="">
+          <img class="large-item" src="img/n4.png" alt="">
+          <img class="large-item" src="img/n5.png" alt="">
+          <img class="large-item" src="img/n6.png" alt="">
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+{% endblock %}

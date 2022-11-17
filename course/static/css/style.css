@@ -1,0 +1,102 @@
+main .large-section {
+  border-bottom: 2px #2f3133 solid;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 2px #2f3133 solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #09090a;
+  height: 2000px; }
+
+header {
+  background-color: #131315;
+  z-index: 2;
+  font-size: 24px;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px #2f3133 solid;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; }
+  header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; }
+  header ul {
+    display: flex;
+    align-items: center; }
+    header ul li {
+      margin-left: 40px; }
+      header ul li .logo {
+        font-size: 50px;
+        margin-left: -40px;
+        font-weight: 700;
+        color: gainsboro; }
+
+main {
+  margin-top: 150px; }
+  main .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+  main .slider-item {
+    border: 2px #2f3133 solid;
+    border-radius: 20px;
+    width: 45%;
+    margin-left: -15px;
+    margin-right: -15px;
+    scrollbar-width: 0px; }
+    main .slider-item.active {
+      width: 55%;
+      z-index: 1;
+      box-shadow: 0px 0px 100px 60px #09090a; }
+  main .large-section {
+    margin-top: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 725px;
+    background-color: #131315;
+    box-sizing: border-box;
+    overflow: hidden; }
+  main .large-items {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start; }
+  main .large-item {
+    margin-right: 20px;
+    width: 19%;
+    border: 2px #2f3133 solid;
+    border-radius: 20px; }
+
+h2 {
+  color: #b4b4b4;
+  font-size: 32px; }
+h3 {
+  color: #b4b4b4; }
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: #b4b4b4; }
+  a:visited {
+    color: #b4b4b4; }
+  a:hover {
+    color: gainsboro;
+    border-bottom: 2px #b4b4b4 solid; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.conteiner {
+  margin: auto;
+  width: 1850px; }
