@@ -6,11 +6,14 @@ def mainPageView(request):
 def filmsPageView(request):
     return render(request, "films.html")
 
-def filmsPageView(request):
+def cartoonsPageView(request):
     return render(request, "cartoons.html")
 
-def filmsPageView(request):
+def serialsPageView(request):
     return render(request, "serials.html")
 
-def filmsPageView(request):
+def animePageView(request):
     return render(request, "anime.html")
+
+def accountPageView(request):
+    return render(request, "account.html")

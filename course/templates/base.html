@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <div class="conteiner">
+    <div class="container">
       <nav>
         <ul>
           <li><a href="{% url 'main' %}"><h1 class="logo">Kinostock</h1></a></li>
@@ -24,7 +24,7 @@
       </nav>
       <ul>
         <li><a href="#">Поиск</a></li>
-        <li><a href="#">Аккаунт</a></li>
+        <li><a href="{% url 'account' %}">Аккаунт</a></li>
       </ul>
     </div>
   </header>
@@ -34,4 +34,5 @@
 {% endblock %}
 
 </body>
+<script src="{% static 'JS/script.js' %}"></script>
 </html>

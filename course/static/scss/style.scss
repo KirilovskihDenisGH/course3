@@ -14,7 +14,6 @@ $border-color: rgb(47, 49, 51);
     border-top-right-radius: 20px;
 }
 
-
 body{
     font-family: 'Roboto', sans-serif;
     background-color: $background-color-black;
@@ -56,13 +55,14 @@ header{
                 margin-left: -40px;
                 font-weight: 700;
                 color: $white;
+
             }
         }
     }
 }
 
 main{
-    margin-top: 150px;
+    margin-top: 130px;
 
     .wrapper{
         display: flex;
@@ -87,6 +87,8 @@ main{
             box-shadow: 0px 0px 100px 60px $background-color-black;
         }
     }
+
+
 
     .large-section{
         margin-top: 70px;
@@ -152,8 +154,123 @@ ul{
     padding: 0;
 }
 
-.conteiner{
+.container{
     margin: auto;
-    width: 1850px;
+    width: 1750px;
 }
 
+a{
+    text-decoration: none;
+    &:link{
+        color: $gray;
+    }
+    &:visited{
+        color: $gray;
+    }
+    &:hover{
+        color: $white;
+        border-bottom: 2px $gray solid;
+    }
+}
+
+form{
+    margin-top: 130px;
+}
+
+.auth_page{
+    margin-top: 130px;
+    margin: auto;
+    width: 300px;
+    color: $white;
+}
+
+.auth_buttons{
+    margin-top: 130px;
+    margin-left: -10px;
+}
+
+.button{
+    float: left;
+    color: $gray;
+    background: $background-color-gray;
+    border: 2px $border-color solid;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 0 10px;
+    transition: all .2s ease;
+        &:hover {
+        color: $white;
+        background: $background-color-black;
+        border: 2px $gray solid;
+    }
+}
+
+.carousel-3d {
+    padding: 20px;
+    -webkit-perspective: 500px;
+    perspective: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    a{
+        &:hover{
+            border: none;
+        }
+    }
+}
+.carousel-3d > * {
+    flex: 0 0 auto;
+}
+.carousel-3d figure {
+    margin: 0;
+    width: 55%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.carousel-3d-border{
+    border: 2px $border-color solid;
+    border-radius: 20px;
+}
+.carousel-3d figure img,
+.carousel-3d figure div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+
+
+}
+.carousel-3d figure div:not(:first-of-type),
+.carousel-3d figure img:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.carousel-3d nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+}
+
+button {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    cursor: pointer;
+    color: $gray;
+    background: $background-color-gray;
+    border: 2px $border-color solid;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+button:hover {
+    color: $white;
+    background: $background-color-black;
+    border: 2px $gray solid;
+}

@@ -1,32 +1,44 @@
-
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
 
   <main>
-    <section class="slider">
-      <div class="wrapper">
-        <img class="slider-item" src="{% static 'img/2.png' %}" alt="">
-        <img class="slider-item active" src="{% static 'img/1.png' %}" alt="">
-        <img class="slider-item" src="{% static 'img/3.png' %}" alt="">
-      </div>
-    </section>
 
-    <section class="large-section">
-      <div class="conteiner">
-        <h2><a href="#">Новое в подписке</a></h2>
+    <div class="carousel-3d" data-gap="20" data-bfc>
+    <figure>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/1.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/2.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/3.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/4.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/5.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/6.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/7.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/8.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/9.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/10.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/11.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/12.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/1.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/2.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/3.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/4.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/5.png' %}"></a></div>
+            <div><a href="#"><img class="carousel-3d-border" src="{% static 'img/6.png' %}"></a></div>
+        </figure>
+        <nav>
+            <button class="nav prev">Назад</button>
+            <button class="nav next">Вперед</button>
+        </nav>
+    </div>
 
-        <div class="large-items">
-          <img class="large-item" src="img/n1.png" alt="">
-          <img class="large-item" src="img/n2.png" alt="">
-          <img class="large-item" src="img/n3.png" alt="">
-          <img class="large-item" src="img/n4.png" alt="">
-          <img class="large-item" src="img/n5.png" alt="">
-          <img class="large-item" src="img/n6.png" alt="">
-        </div>
-      </div>
+<!--    <section class="slider">-->
+<!--      <div class="wrapper">-->
+<!--        <div><a href="#any"><img src="{% static 'img/1.png' %}" alt=""/></a></div>-->
+<!--        <div><a href="#any"><img src="{% static 'img/2.png' %}" alt=""/></a></div>-->
+<!--        <div><a href="#any"><img src="{% static 'img/3.png' %}" alt=""/></a></div>-->
+<!--      </div>-->
+<!--    </section>-->
 
-    </section>
   </main>
 
 {% endblock %}
