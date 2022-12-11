@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <div style="margin-top: 130px; padding-top: 40px;" class="borders-section">
+      <div class="container">
+          <div class="description-block">
+
+              <div class="image-block">
+                  <img src="{{ movie.poster.url }}" alt="">
+              </div>
+
+              <div class="description">
+                  <h2 style="margin-top: 0px; margin-bottom: 25px;">{{ movie.title }}</h2>
+
+                  <p>{{ movie.description }}</p>
+
+                  <p>Год производства: {{ movie.year }}</p>
+
+                  <p>Жанр:
+                      {% for genre in movie.genres.all %}
+                      {{ genre.name }}
+                      {% endfor %}
+                  </p>
+
+                  <p>Страна: {{ movie.country }}</p>
+
+                  <p>Бюджет: {{ movie.budget }}$</p>
+
+                  <p>Сборы в США: {{ movie.fees_in_usa }}$</p>
+
+                  <p>Сборы в мире: {{ movie.fees_in_world }}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="video">
+      <video controls width="100%" height="700px">
+          <source src="{{ movie.video.url }}">
+      </video>
+  </div>
+
+{% endblock %}

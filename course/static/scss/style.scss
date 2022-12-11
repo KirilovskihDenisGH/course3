@@ -14,10 +14,15 @@ $border-color: rgb(47, 49, 51);
     border-top-right-radius: 20px;
 }
 
+%full-borders{
+    border: 2px $border-color solid;
+    border-radius: 20px;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: $background-color-black;
-    height: 2000px;
+    height: auto;
 }
 
 header{
@@ -63,74 +68,30 @@ header{
 
 main{
     margin-top: 130px;
+    margin-bottom: 60px;
+}
 
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
+footer{
+    border-top: 2px $border-color solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba($color: $background-color-gray, $alpha: 1);
 
-    .slider-item{
-        border: 2px $border-color solid;
-        border-radius: 20px;
+    height: 300px;
+}
 
-        width: 45%;
-        
-        margin-left: -15px;
-        margin-right: -15px;
-        scrollbar-width: 0px;
-
-        &.active{
-            width: 55%;
-            z-index: 1;
-            box-shadow: 0px 0px 100px 60px $background-color-black;
-        }
-    }
-
-
-
-    .large-section{
-        margin-top: 70px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        height: 725px;
-        
-        background-color: $background-color-gray;
-        
-        box-sizing: border-box;
-
-        overflow: hidden;
-
-        @extend %top-bottom-borders;
-        
-    }
-
-    .large-items{
-        margin-top: 40px;
-        margin-bottom: 40px;
-
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .large-item{
-        margin-right: 20px;
-        width: 19%;
-
-        border: 2px $border-color solid;
-        border-radius: 20px;
-
-    }
+p{
+    color: $gray;
 }
 
 h{
     &2{
-        color: $gray;
-        font-size: 32px;
+        color: $white;
+        font-size: 40px;
     }
     &3{
         color: $gray;
+        font-size: 30px;
     }
 }
 
@@ -154,11 +115,6 @@ ul{
     padding: 0;
 }
 
-.container{
-    margin: auto;
-    width: 1750px;
-}
-
 a{
     text-decoration: none;
     &:link{
@@ -173,8 +129,67 @@ a{
     }
 }
 
+button {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    cursor: pointer;
+    color: $gray;
+    background: $background-color-gray;
+    border: 2px $border-color solid;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+button:hover {
+    color: $white;
+    background: $background-color-black;
+    border: 2px $gray solid;
+}
+
 form{
     margin-top: 130px;
+}
+
+.borders-section{
+    margin-top: -10px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    height: auto;
+
+    background-color: $background-color-gray;
+
+    box-sizing: border-box;
+    overflow: hidden;
+    @extend %top-bottom-borders;
+}
+
+.films-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img{
+        margin-bottom: 30px;
+        @extend %full-borders
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            border-bottom: none;
+        }
+    }
+}
+
+.container{
+    margin: auto;
+    width: 1750px;
+}
+
+.video{
+    margin: 0 auto 0;
+    width: 100%;
+    height: 700px;
+    box-sizing: border-box;
 }
 
 .auth_page{
@@ -234,8 +249,7 @@ form{
     transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .carousel-3d-border{
-    border: 2px $border-color solid;
-    border-radius: 20px;
+    @extend %full-borders
 }
 .carousel-3d figure img,
 .carousel-3d figure div {
@@ -254,23 +268,26 @@ form{
 .carousel-3d nav {
     display: flex;
     justify-content: center;
-    margin: 30px 0 0;
+    margin: 30px 0 30px;
 }
 
-button {
-    flex: 0 0 auto;
-    margin: 0 10px;
-    cursor: pointer;
-    color: $gray;
-    background: $background-color-gray;
-    border: 2px $border-color solid;
-    border-radius: 20px;
-    padding: 5px 10px;
-    font-weight: bold;
-    transition: all .2s ease;
+.description-block{
+    display: flex;
 }
-button:hover {
-    color: $white;
-    background: $background-color-black;
-    border: 2px $gray solid;
+
+.image-block{
+    width: 500px;
+    margin-bottom: 50px;
+    img{
+        width: 400px;
+        border: 2px $border-color solid;
+        border-radius: 20px;
+    }
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    word-wrap: wrap;
+    width: 800px;
 }

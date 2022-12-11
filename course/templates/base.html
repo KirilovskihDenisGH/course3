@@ -8,6 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- Video.js base CSS -->
+  <link
+    href="https://unpkg.com/video.js@7/dist/video-js.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- City -->
+  <link
+    href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+    rel="stylesheet"
+  />
+
   <title>Kinostock</title>
 </head>
 <body>
@@ -16,7 +29,7 @@
       <nav>
         <ul>
           <li><a href="{% url 'main' %}"><h1 class="logo">Kinostock</h1></a></li>
-          <li><a href="{% url 'films' %}">Фильмы</a></li>
+          <li><a href="{% url 'movies' %}">Фильмы</a></li>
           <li><a href="{% url 'serials' %}">Сериалы</a></li>
           <li><a href="{% url 'cartoons' %}">Мультфильмы</a></li>
           <li><a href="{% url 'anime' %}">Аниме</a></li>
@@ -33,6 +46,10 @@
 
 {% endblock %}
 
+  <footer>
+
+  </footer>
 </body>
 <script src="{% static 'JS/script.js' %}"></script>
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 </html>

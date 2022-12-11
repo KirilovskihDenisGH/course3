@@ -19,12 +19,8 @@ from pages import views
 
 
 urlpatterns = [
-    path('', views.mainPageView, name='main'),
+    path('', include('movies.urls')),
     path('admin/', admin.site.urls),
-    path('films/', views.filmsPageView, name='films'),
-    path('cartoons/', views.cartoonsPageView, name='cartoons'),
-    path('serials/', views.serialsPageView, name='serials'),
-    path('anime/', views.animePageView, name='anime'),
     path('account/', views.accountPageView, name='account'),
     path('users/', include('users.urls')),
     path('users/', include('django.contrib.auth.urls')),
