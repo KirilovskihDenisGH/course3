@@ -36,9 +36,13 @@
   </div>
 
   <div class="video">
+      {% if user.is_authenticated %}
       <video controls width="100%" height="700px">
           <source src="{{ movie.video.url }}">
       </video>
+      {% else %}
+      <h3 style=" text-align: center; padding-top: 300px;">Для доступа к фильму войдите в аккаунт</h3>
+      {% endif %}
   </div>
 
   <div style="padding-top: 40px;" class="borders-section">
@@ -71,5 +75,46 @@
           </div>
       </div>
   </div>
+
+  <div class="container">
+      <div class="comments">
+          <h3>Написать комментарий:</h3>
+
+          {% if user.is_authenticated %}
+
+          <form style="margin-top: 50px; margin-bottom : 50px;" action="{% url 'add_review' movie.id %}" method="post">
+              {% csrf_token %}
+              <textarea style="margin-bottom: 20px;" rows="8" cols="60" name="text" required="" placeholder="Текст комментария..."></textarea>
+              <div style="display: flex;">
+                  <div style="margin-right: 40px;">
+                      <label for="contactname">
+                          Имя
+                      </label>
+                      <input  type="text" name="name" id="contactname" required="" value="{{ user.username }}" >
+                  </div>
+                  <div>
+                      <label for="contactemail">
+                          Email
+                      </label>
+                      <input  type="email" name="email" id="contactemail" required="" value="{{ user.email }}" >
+                  </div>
+              </div>
+              <button style="margin-top: 20px; margin-left: 0px;" type="submit">Отправить</button>
+          </form>
+
+          {% else %}
+          <h3>Чтобы оставить комментарий войтите в аккаунт</h3>
+          {% endif %}
+          <h3>Комментарии:</h3>
+          {% for review in movie.reviews_set.all %}
+          <div class="review">
+              <p> {{ review.name }}: </p>
+              <p>{{ review.text }}</p>
+          </div>
+
+          {% endfor %}
+      </div>
+  </div>
+
 
 {% endblock %}

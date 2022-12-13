@@ -74,7 +74,7 @@ main{
 
 
 
-p{
+p, label{
     color: $gray;
 }
 
@@ -283,16 +283,17 @@ form{
 
 .actor{
     margin-right: 30px;
-    width: 200px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .actor-img{
-    width: 200px;
+    width: 150px;
     border: 2px $border-color solid;
     border-radius: 20px;
+
 }
 
 .description{
@@ -300,4 +301,20 @@ form{
     flex-direction: column;
     word-wrap: wrap;
     width: 800px;
+}
+
+.comments{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.review{
+    display: flex;
+    width: 800px;
+    p{
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
 }

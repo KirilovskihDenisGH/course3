@@ -7,5 +7,6 @@ urlpatterns = [
     path('cartoons/', views.cartoonsPageView.as_view(), name='cartoons'),
     path('serials/', views.serialsPageView.as_view(), name='serials'),
     path('anime/', views.animePageView.as_view(), name='anime'),
-    path('movie/<int:pk>/', views.movieDetailView.as_view(), name='detail')
+    path('movie/<int:pk>/', views.movieDetailView.as_view(), name='detail'),
+    path('review/<int:pk>/', views.AddReview.as_view(), name='add_review')
 ]

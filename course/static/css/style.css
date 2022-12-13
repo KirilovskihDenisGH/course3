@@ -47,7 +47,7 @@ main {
   margin-top: 130px;
   height: auto; }
 
-p {
+p, label {
   color: #b4b4b4; }
 
 h2 {
@@ -212,13 +212,13 @@ form {
 
 .actor {
   margin-right: 30px;
-  width: 200px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center; }
 
 .actor-img {
-  width: 200px;
+  width: 150px;
   border: 2px #2f3133 solid;
   border-radius: 20px; }
 
@@ -227,3 +227,15 @@ form {
   flex-direction: column;
   word-wrap: wrap;
   width: 800px; }
+
+.comments {
+  margin-top: 70px;
+  margin-bottom: 70px; }
+
+.review {
+  display: flex;
+  width: 800px; }
+  .review p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px; }

@@ -1,14 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.base import View
 from django.views.generic import ListView, DetailView
 from . import models
-
-from .models import Movie
-
-# class MoviesView(View):
-#     def get(self, request):
-#         movies = Movie.objects.all()
-#         return render(request, "movies/movie_list.html", {"movie_list": movies})
+from .forms import ReviwForm
 
 class mainPageView(ListView):
     model = models.Movie
@@ -33,3 +27,12 @@ class animePageView(ListView):
 class movieDetailView(DetailView):
     model = models.Movie
     template_name = "detail.html"
+
+class AddReview(View):
+    def post(self, request, pk):
+        form = ReviwForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.movie_id = pk
+            form.save()
+        return redirect("/")
