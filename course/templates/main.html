@@ -37,7 +37,7 @@
             <h3>Все фильмы</h3>
             <ul class="films-list">
                 {% for movie in object_list %}
-                <li><a href="{% url 'detail' movie.pk %}"><img style="width: 260px;" src="{{ movie.poster }}"></a></li>
+                <li><a href="{% url 'detail' movie.pk %}"><img src="{{ movie.poster }}"></a></li>
                 {% endfor %}
             </ul>
         </div>
