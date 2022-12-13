@@ -44,15 +44,8 @@ header {
         color: gainsboro; }
 
 main {
-  margin-top: 130px; }
-
-footer {
-  border-top: 2px #2f3133 solid;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: #131315;
-  height: 300px;
-  margin-top: 70px; }
+  margin-top: 130px;
+  height: auto; }
 
 p {
   color: #b4b4b4; }

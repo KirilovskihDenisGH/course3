@@ -50,9 +50,9 @@ class Movie(models.Model):
     budget = models.PositiveSmallIntegerField("Бюджет", default=0, help_text="Сумма в долларах")
     fees_in_usa = models.PositiveSmallIntegerField("Сборы в США", default=0, help_text="Сумма в долларах")
     fees_in_world = models.PositiveSmallIntegerField("Сборы в мире", default=0, help_text="Сумма в долларах")
-    format = models.ForeignKey(Format, verbose_name="Формат", on_delete=models.SET_NULL, null=True)
-    url = models.SlugField(max_length=160, unique=True)
-    draft = models.BooleanField("Черновик", default=False)
+    # format = models.ForeignKey(Format, verbose_name="Формат", on_delete=models.SET_NULL, null=True)
+    # url = models.SlugField(max_length=160, unique=True)
+    # draft = models.BooleanField("Черновик", default=False)
 
     def __str__(self):
         return self.title
