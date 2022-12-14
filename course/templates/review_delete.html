@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>Удалить</h2>
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Удалить комментарий?</p>
+        <button style="margin-top: 20px; margin-left: 0px;" type="submit">Удалить</button>
+    </form>
+</div>
+{% endblock %}

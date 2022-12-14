@@ -103,7 +103,10 @@
                   <p style="margin-bottom: 0px; color: rgb(220, 220, 220); "> {{ review.name }}: </p>
                   <p style="margin-bottom: 0px; ">{{ review.text }}</p>
                   {% if review.name == user.username %}
-                      <p>aaaa</p>
+                      <p>
+                          <a href="{% url 'review_edit' review.pk %}">Редактировать</a> |
+                          <a href="{% url 'review_delete' review.pk %}">Удалить</a>
+                      </p>
                   {% endif %}
               </div>
           </div>

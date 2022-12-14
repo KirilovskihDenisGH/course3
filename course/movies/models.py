@@ -55,7 +55,7 @@ class Movie(models.Model):
 class Reviews(models.Model):
     name = models.CharField("Имя", max_length=100)
     text = models.TextField("Комментарий", max_length=2000)
-    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, verbose_name="Фильм", on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse('detail')

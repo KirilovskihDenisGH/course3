@@ -1,12 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy
 from django.views.generic.base import View
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from . import models
 from .forms import ReviwForm
 
 class mainPageView(ListView):
     model = models.Movie
     template_name = "main.html"
+    # queryset = models.Movie(id=1)
 
 class moviePageView(ListView):
     model = models.Movie
@@ -37,7 +39,12 @@ class AddReview(View):
             form.save()
         return redirect("/")
 
-# class CommentUpdateView(UpdateView):
-#     model = models.Reviews
-#     fields = ['text']
-#     template_name = 'comment_'
+class ReviewUpdateView(UpdateView):
+    model = models.Reviews
+    template_name = 'review_edit.html'
+    fields = ['text']
+    success_url = reverse_lazy('main')
+class ReviewDeleteView(DeleteView):
+    model = models.Reviews
+    template_name = 'review_delete.html'
+    success_url = reverse_lazy('main')

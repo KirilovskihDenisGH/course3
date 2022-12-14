@@ -236,6 +236,7 @@ form {
   display: flex;
   border: 2px #2f3133 solid;
   border-radius: 20px;
+  background-color: #131315;
   width: 800px;
   padding-left: 20px;
   margin-bottom: 20px; }
