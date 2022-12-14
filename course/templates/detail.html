@@ -98,9 +98,14 @@
           {% endif %}
           <h3>Комментарии:</h3>
           {% for review in movie.reviews_set.all %}
-          <div class="review">
-              <p> {{ review.name }}: </p>
-              <p>{{ review.text }}</p>
+          <div class="reviews">
+              <div class="review" style="flex-direction: column; margin-bottom: 20px;">
+                  <p style="margin-bottom: 0px; color: rgb(220, 220, 220); "> {{ review.name }}: </p>
+                  <p style="margin-bottom: 0px; ">{{ review.text }}</p>
+                  {% if review.name == user.username %}
+                      <p>aaaa</p>
+                  {% endif %}
+              </div>
           </div>
 
           {% endfor %}

@@ -115,7 +115,7 @@ form {
   display: flex;
   flex-wrap: wrap; }
   .films-list img {
-    width: 262px;
+    width: 200px;
     margin-bottom: 25px;
     margin-right: 25px; }
   .films-list a {
@@ -125,7 +125,7 @@ form {
 
 .container {
   margin: auto;
-  width: 1750px; }
+  width: 1650px; }
 
 .video {
   margin: 0 auto 0;
@@ -232,10 +232,20 @@ form {
   margin-top: 70px;
   margin-bottom: 70px; }
 
+.reviews {
+  display: flex;
+  border: 2px #2f3133 solid;
+  border-radius: 20px;
+  width: 800px;
+  padding-left: 20px;
+  margin-bottom: 20px; }
+
 .review {
   display: flex;
-  width: 800px; }
+  max-width: 800px; }
   .review p {
     font-weight: bold;
     font-size: 20px;
     margin-right: 20px; }
+  .review p:nth-child(2) {
+    word-break: break-all; }
