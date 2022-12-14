@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.base import View
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
 from . import models
 from .forms import ReviwForm
 
@@ -36,3 +36,8 @@ class AddReview(View):
             form.movie_id = pk
             form.save()
         return redirect("/")
+
+# class CommentUpdateView(UpdateView):
+#     model = models.Reviews
+#     fields = ['text']
+#     template_name = 'comment_'

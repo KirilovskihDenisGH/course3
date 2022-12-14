@@ -42,6 +42,8 @@ class Movie(models.Model):
     fees_in_usa = models.PositiveSmallIntegerField("Сборы в США", default=0, help_text="Сумма в долларах")
     fees_in_world = models.PositiveSmallIntegerField("Сборы в мире", default=0, help_text="Сумма в долларах")
 
+
+
     def __str__(self):
         return self.title
 
@@ -51,12 +53,9 @@ class Movie(models.Model):
 
 
 class Reviews(models.Model):
-    email = models.EmailField()
     name = models.CharField("Имя", max_length=100)
     text = models.TextField("Комментарий", max_length=2000)
     movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE)
-    # def __str__(self):
-    #     return f"{self.name} - {self.movie}"
 
     def get_absolute_url(self):
         return reverse('detail')
