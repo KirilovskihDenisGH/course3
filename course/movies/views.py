@@ -1,14 +1,15 @@
+from . import models
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic.base import View
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from .models import Movie, Reviews
 from .forms import ReviwForm
+from django.db.models import Q
 
 class mainPageView(ListView):
     model = Movie
     template_name = "main.html"
-
 
 class moviePageView(ListView):
     model = Movie
@@ -48,3 +49,4 @@ class ReviewDeleteView(DeleteView):
     model = Reviews
     template_name = 'review_delete.html'
     success_url = reverse_lazy('main')
+

@@ -41,7 +41,7 @@ class Movie(models.Model):
     budget = models.PositiveSmallIntegerField("Бюджет", default=0, help_text="Сумма в долларах")
     fees_in_usa = models.PositiveSmallIntegerField("Сборы в США", default=0, help_text="Сумма в долларах")
     fees_in_world = models.PositiveSmallIntegerField("Сборы в мире", default=0, help_text="Сумма в долларах")
-
+    promo = models.BooleanField("Промо", default=False)
 
 
     def __str__(self):

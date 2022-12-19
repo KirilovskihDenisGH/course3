@@ -47,18 +47,17 @@
 
   <div style="padding-top: 40px;" class="borders-section">
       <div class="container">
-          <h3>Режиссёр:</h3>
+          <h3>Режиссёры:</h3>
 
-          <div class="actor">
-              <img class="actor-img" src="
-                  {% for director in movie.directors.all %}
-                  {{ director.image.url }}
-                  {% endfor %}">
-              <p>
-                  {% for director in movie.directors.all %}
-                  {{ director.name }}
-                  {% endfor %}
-              </p>
+          <div class="actors-list">
+              {% for director in movie.directors.all %}
+              <div class="actor">
+                  <img class="actor-img" src="{{ director.image.url }}">
+                  <p>
+                      {{ director.name }}
+                  </p>
+              </div>
+              {% endfor %}
           </div>
 
           <h3>Актёры:</h3>

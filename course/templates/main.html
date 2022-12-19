@@ -6,24 +6,11 @@
 
     <div class="carousel-3d" data-gap="20" data-bfc>
         <figure>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/1.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/2.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/3.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/4.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/5.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/6.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/7.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/8.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/9.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/10.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/11.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/12.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/1.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/2.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/3.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/4.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/5.png' %}"></a></div>
-            <div><a href="#"><img class="carousel-3d-border" src="{% static 'banner/6.png' %}"></a></div>
+            {% for movie in object_list %}
+                {% if movie.promo == True %}
+                    <div><a href="{% url 'detail' movie.pk %}"><img class="carousel-3d-border" src="{{ movie.banner }}"></a></div>yyyyy
+                {% endif %}
+            {% endfor %}
         </figure>
         <nav>
             <button class="nav prev">Назад</button>
